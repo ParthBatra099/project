@@ -1,0 +1,27 @@
+{
+  "name": "june-ai-assistant",
+  "version": "1.0.0",
+  "description": "AI Productivity Assistant with Voice Interaction",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run dev:all",
+    "dev:all": "concurrently \"npm run dev:backend\" \"npm run dev:ai\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:ai": "cd ai-engine && python app.py",
+    "dev:frontend": "cd frontend && npm start",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build"
+  },
+  "keywords": [
+    "ai",
+    "productivity",
+    "voice-assistant",
+    "task-management"
+  ],
+  "author": "ParthBatra099",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
